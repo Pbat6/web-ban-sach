@@ -8,6 +8,7 @@ class WebBanSachApplicationTests {
 
 	@Test
 	void contextLoads() {
+
 	}
 
 }
