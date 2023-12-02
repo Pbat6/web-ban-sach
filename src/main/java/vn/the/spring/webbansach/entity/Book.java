@@ -47,20 +47,20 @@ public class Book {
             joinColumns = @JoinColumn(name = "book_id"),
             inverseJoinColumns = @JoinColumn(name = "category_id")
     )
-    List<Category> categoryList;
+    private List<Category> categoryList;
 
     @OneToMany(mappedBy = "book", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    List<Image> imageList;
+    private List<Image> imageList;
 
     @OneToMany(mappedBy = "book", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    List<Review> reviewList;
+    private List<Review> reviewList;
 
     @OneToMany(mappedBy = "book", fetch = FetchType.LAZY, cascade = {
             CascadeType.DETACH, CascadeType.MERGE,
             CascadeType.PERSIST,CascadeType.REFRESH
     })
-    List<OrderDetail> orderDetailList;
+    private List<OrderDetail> orderDetailList;
 
     @OneToMany(mappedBy = "book", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    List<Wishlist> wishList;
+    private List<Wishlist> wishList;
 }
